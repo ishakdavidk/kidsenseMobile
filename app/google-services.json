@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "795553986370",
+    "firebase_url": "https://kidsense-952bc.firebaseio.com",
+    "project_id": "kidsense-952bc",
+    "storage_bucket": "kidsense-952bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:795553986370:android:0c6817776bf46b55",
+        "android_client_info": {
+          "package_name": "comple.example.asus.kidsense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "795553986370-tral6is0hapa1349toj5vldfol58dfi8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "comple.example.asus.kidsense",
+            "certificate_hash": "fb610c5ada8c0958999d547e5a58660f82f5f652"
+          }
+        },
+        {
+          "client_id": "795553986370-j9l1g5vo68ctauul0k9ongekjfin0v8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCW6QQKKlCFMUGORk3TniCM1Qn7clRG6Hk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "795553986370-j9l1g5vo68ctauul0k9ongekjfin0v8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
