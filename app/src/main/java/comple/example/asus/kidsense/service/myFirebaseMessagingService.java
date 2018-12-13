@@ -45,7 +45,7 @@ public class myFirebaseMessagingService extends FirebaseMessagingService {
     private void sendNotification(RemoteMessage remoteMessage) {
         Map<String, String> data = remoteMessage.getData();
         String content = data.get("content");
-        String deviceId = data.get("deviceId");
+        String name = data.get("name");
         String latitude = data.get("latitude");
         String longitude = data.get("longitude");
         String timestamp = data.get("timestamp");
@@ -75,7 +75,7 @@ public class myFirebaseMessagingService extends FirebaseMessagingService {
         Intent intent = new Intent(this, MapsActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra("content", content);
-        intent.putExtra("deviceId", deviceId);
+        intent.putExtra("name", name);
         intent.putExtra("latitude", latitude);
         intent.putExtra("longitude", longitude);
         intent.putExtra("timestamp", timestamp);
@@ -84,11 +84,11 @@ public class myFirebaseMessagingService extends FirebaseMessagingService {
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID);
 
         NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
-        inboxStyle.setBigContentTitle(content);
+        inboxStyle.setBigContentTitle(name);
         inboxStyle.addLine("Lat : " + latitude);
         inboxStyle.addLine("Lng : " + longitude);
         inboxStyle.addLine("When : " + timestamp);
-        inboxStyle.setSummaryText(deviceId);
+        inboxStyle.setSummaryText("Kidsense");
 
         notificationBuilder.setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_ALL)
@@ -97,10 +97,10 @@ public class myFirebaseMessagingService extends FirebaseMessagingService {
                 .setTicker("New Incoming Location")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
-                .setContentTitle(content)
+                .setContentTitle(name)
                 .setContentText(timestamp)
                 .setStyle(inboxStyle)
-                .setContentInfo("Location")
+                .setContentInfo(content)
                 .setContentIntent(pendingIntent);
 
         notificationManager.notify(uniqueId,notificationBuilder.build());

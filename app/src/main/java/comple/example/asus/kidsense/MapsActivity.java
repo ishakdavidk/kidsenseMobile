@@ -52,8 +52,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         Intent intent = getIntent();
         String source = intent.getStringExtra("content");
 
-        if (source.equals("My Watch Location")) {
-            sdId = intent.getStringExtra("deviceId");
+        if (source.equals("Location")) {
+            sdId = intent.getStringExtra("name");
             slat = intent.getStringExtra("latitude");
             slng = intent.getStringExtra("longitude");
             stmp = intent.getStringExtra("timestamp");
